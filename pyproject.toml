@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+
+[project]
+name = "otCEISVAE"
+version = "0.1"
+description = "Module for high-dimension reliability problems with OpenTURNS"
+readme = "README.rst"
+dependencies = ['numpy>=1.26.4',
+                      'tensorflow-cpu==2.19.0',
+                      'matplotlib',
+                      'silence_tensorflow==1.2.3',
+                      'tensorflow_probability==0.25.0',
+                      'keras>=3.10.0',
+                      'tf_keras>=2.19.0',
+                      'scikit-learn>=1.5.1',
+                      'openturns>=1.25']
+
+[project.optional-dependencies]
+doc = ["numpydoc", "sphinx-gallery", "sphinx", "matplotlib"]
+test = ["pytest"]

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CEISVAE &#8212; otCEISVAE 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/openturns.css?v=8eaafb59" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script src="../../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CEISVAEResult" href="otCEISVAE.CEISVAEResult.html" />
+    <link rel="prev" title="API Reference" href="../user_manual.html" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
+          rel='stylesheet' type='text/css' />
+ 
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../user_manual.html">Doc</a></li>
+    <li><a href="../../examples/examples.html">Examples</a></li>
+  </ul>
+  <a href="../../index.html">
+    <h1>
+      <img src="../../_static/logo-openturns-wo-bg.png" alt="" width=100px height=100px />
+      otCEISVAE
+    </h1>
+    <h2> Module otCEISVAE </h2>
+  </a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="otCEISVAE.CEISVAEResult.html" title="CEISVAEResult"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../user_manual.html" title="API Reference"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">otCEISVAE 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../user_manual.html" accesskey="U">API Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CEISVAE</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../principle/principle.html">Cross-Entropy Importance Sampling Using Variational AutoEncoder</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CEISVAE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otCEISVAE.CEISVAEResult.html">CEISVAEResult</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/examples.html">Examples</a></li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../user_manual.html"
+                          title="previous chapter">API Reference</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="otCEISVAE.CEISVAEResult.html"
+                          title="next chapter">CEISVAEResult</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/user_manual/_generated/otCEISVAE.CEISVAE.rst"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ceisvae">
+<h1>CEISVAE<a class="headerlink" href="#ceisvae" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CEISVAE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantileLevel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbIS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latentDim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbCompVampPrior</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxNbSim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE" title="Link to this definition">¶</a></dt>
+<dd><p>Class implementing Cross-Entropy Importance Sampling algorithm based on Variational AutoEncoder (VAE).</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>event</strong><span class="classifier"><a class="reference external" href="http://openturns.github.io/openturns/latest/user_manual/_generated/openturns.ThresholdEvent.html#openturns.ThresholdEvent" title="(in OpenTURNS v1.22)"><code class="xref py py-class docutils literal notranslate"><span class="pre">openturns.ThresholdEvent</span></code></a></span></dt><dd><p>ThresholdEvent based on composite vector of input variables on limit state function.</p>
+</dd>
+<dt><strong>quantileLevel</strong><span class="classifier">float</span></dt><dd><p>Quantile level for Cross-Entropy Importance Sampling.</p>
+</dd>
+<dt><strong>nbIS</strong><span class="classifier">integer</span></dt><dd><p>Number of IS samples at each CE-IS setp.</p>
+</dd>
+<dt><strong>latentDim</strong><span class="classifier">integer</span></dt><dd><p>Dimension of the latent space of the VAE.</p>
+</dd>
+<dt><strong>nbCompVampPrior</strong><span class="classifier">integer</span></dt><dd><p>Number of components for the VampPrior.</p>
+</dd>
+<dt><strong>maxNbSim</strong><span class="classifier">integer</span></dt><dd><p>Total simulation budget allowed.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.getQuantileLevel" title="otCEISVAE.CEISVAE.getQuantileLevel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getQuantileLevel</span></code></a>()</p></td>
+<td><p>Accessor to quantile level.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.getResult" title="otCEISVAE.CEISVAE.getResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getResult</span></code></a>()</p></td>
+<td><p>Accessor to simulation algorithm result.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.getVAEBatchSize" title="otCEISVAE.CEISVAE.getVAEBatchSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVAEBatchSize</span></code></a>()</p></td>
+<td><p>Accessor to batch size for Variational AutoEncoder.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.getVAEBeta1" title="otCEISVAE.CEISVAE.getVAEBeta1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVAEBeta1</span></code></a>()</p></td>
+<td><p>Accessor to beta1 parameter for training of Variational AutoEncoder with Adam optimizer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.getVAEBeta2" title="otCEISVAE.CEISVAE.getVAEBeta2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVAEBeta2</span></code></a>()</p></td>
+<td><p>Accessor to beta2 parameter for training of Variational AutoEncoder with Adam optimizer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.getVAEEpochs" title="otCEISVAE.CEISVAE.getVAEEpochs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVAEEpochs</span></code></a>()</p></td>
+<td><p>Accessor to epochs for Variational AutoEncoder.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.getVAEEpsilon" title="otCEISVAE.CEISVAE.getVAEEpsilon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVAEEpsilon</span></code></a>()</p></td>
+<td><p>Accessor to epsilon parameter for training of Variational AutoEncoder with Adam optimizer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.getVAELearningRate" title="otCEISVAE.CEISVAE.getVAELearningRate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVAELearningRate</span></code></a>()</p></td>
+<td><p>Accessor to learning rate for training of Variational AutoEncoder with Adam optimizer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.getVAEdimLayer1" title="otCEISVAE.CEISVAE.getVAEdimLayer1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVAEdimLayer1</span></code></a>()</p></td>
+<td><p>Accessor to dimension of Layer1 of Variational AutoEncoder.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.getVAEdimLayer2" title="otCEISVAE.CEISVAE.getVAEdimLayer2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVAEdimLayer2</span></code></a>()</p></td>
+<td><p>Accessor to dimension of Layer2 of Variational AutoEncoder.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.run" title="otCEISVAE.CEISVAE.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>()</p></td>
+<td><p>Function computing failure probability using Cross-Entropy Importance Sampling using Variational AutoEncoder.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.setQuantileLevel" title="otCEISVAE.CEISVAE.setQuantileLevel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setQuantileLevel</span></code></a>(quantileLevel)</p></td>
+<td><p>Set up the quantile level.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.setVAEBatchSize" title="otCEISVAE.CEISVAE.setVAEBatchSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVAEBatchSize</span></code></a>(batch_size)</p></td>
+<td><p>Set up the batch size for Variational AutoEncoder.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.setVAEBeta1" title="otCEISVAE.CEISVAE.setVAEBeta1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVAEBeta1</span></code></a>(beta_1)</p></td>
+<td><p>Set up the beta1 parameter for training of Variational AutoEncoder with Adam optimizer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.setVAEBeta2" title="otCEISVAE.CEISVAE.setVAEBeta2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVAEBeta2</span></code></a>(beta_2)</p></td>
+<td><p>Set up the beta2 parameter for training of Variational AutoEncoder with Adam optimizer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.setVAEEpochs" title="otCEISVAE.CEISVAE.setVAEEpochs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVAEEpochs</span></code></a>(epochs)</p></td>
+<td><p>Set up the epochs for Variational AutoEncoder.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.setVAEEpsilon" title="otCEISVAE.CEISVAE.setVAEEpsilon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVAEEpsilon</span></code></a>(epsilon)</p></td>
+<td><p>Set up the epsilon parameter for training of Variational AutoEncoder with Adam optimizer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.setVAELearningRate" title="otCEISVAE.CEISVAE.setVAELearningRate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVAELearningRate</span></code></a>(learning_rate)</p></td>
+<td><p>Set up the learning rate for training of Variational AutoEncoder with Adam optimizer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.setVAEdimLayer1" title="otCEISVAE.CEISVAE.setVAEdimLayer1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVAEdimLayer1</span></code></a>(dimLayer1)</p></td>
+<td><p>Set up the dimension of Layer1 of Variational AutoEncoder.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAE.setVAEdimLayer2" title="otCEISVAE.CEISVAE.setVAEdimLayer2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVAEdimLayer2</span></code></a>(dimLayer2)</p></td>
+<td><p>Set up the dimension of Layer2 of Variational AutoEncoder.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantileLevel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbIS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latentDim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbCompVampPrior</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxNbSim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.getQuantileLevel">
+<span class="sig-name descname"><span class="pre">getQuantileLevel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.getQuantileLevel" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to quantile level.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.getResult">
+<span class="sig-name descname"><span class="pre">getResult</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.getResult" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to simulation algorithm result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.getVAEBatchSize">
+<span class="sig-name descname"><span class="pre">getVAEBatchSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.getVAEBatchSize" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to batch size for Variational AutoEncoder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.getVAEBeta1">
+<span class="sig-name descname"><span class="pre">getVAEBeta1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.getVAEBeta1" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to beta1 parameter for training of Variational AutoEncoder with Adam optimizer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.getVAEBeta2">
+<span class="sig-name descname"><span class="pre">getVAEBeta2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.getVAEBeta2" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to beta2 parameter for training of Variational AutoEncoder with Adam optimizer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.getVAEEpochs">
+<span class="sig-name descname"><span class="pre">getVAEEpochs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.getVAEEpochs" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to epochs for Variational AutoEncoder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.getVAEEpsilon">
+<span class="sig-name descname"><span class="pre">getVAEEpsilon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.getVAEEpsilon" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to epsilon parameter for training of Variational AutoEncoder with Adam optimizer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.getVAELearningRate">
+<span class="sig-name descname"><span class="pre">getVAELearningRate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.getVAELearningRate" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to learning rate for training of Variational AutoEncoder with Adam optimizer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.getVAEdimLayer1">
+<span class="sig-name descname"><span class="pre">getVAEdimLayer1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.getVAEdimLayer1" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to dimension of Layer1 of Variational AutoEncoder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.getVAEdimLayer2">
+<span class="sig-name descname"><span class="pre">getVAEdimLayer2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.getVAEdimLayer2" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to dimension of Layer2 of Variational AutoEncoder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.run" title="Link to this definition">¶</a></dt>
+<dd><p>Function computing failure probability using Cross-Entropy Importance Sampling using Variational AutoEncoder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.setQuantileLevel">
+<span class="sig-name descname"><span class="pre">setQuantileLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantileLevel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.setQuantileLevel" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the quantile level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>quantileLevel</strong><span class="classifier">float</span></dt><dd><p>Quantile level for Importance Sampling.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.setVAEBatchSize">
+<span class="sig-name descname"><span class="pre">setVAEBatchSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.setVAEBatchSize" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the batch size for Variational AutoEncoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>batch_size</strong><span class="classifier">integer</span></dt><dd><p>batch size for training of Variational AutoEncoder with Adam optimizer.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.setVAEBeta1">
+<span class="sig-name descname"><span class="pre">setVAEBeta1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">beta_1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.setVAEBeta1" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the beta1 parameter for training of Variational AutoEncoder with Adam optimizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>beta_1</strong><span class="classifier">float</span></dt><dd><p>beta_1 parameter for training of Variational AutoEncoder with Adam optimizer.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.setVAEBeta2">
+<span class="sig-name descname"><span class="pre">setVAEBeta2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">beta_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.setVAEBeta2" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the beta2 parameter for training of Variational AutoEncoder with Adam optimizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>beta_2</strong><span class="classifier">float</span></dt><dd><p>beta_2 parameter for training of Variational AutoEncoder with Adam optimizer.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.setVAEEpochs">
+<span class="sig-name descname"><span class="pre">setVAEEpochs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epochs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.setVAEEpochs" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the epochs for Variational AutoEncoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>epochs</strong><span class="classifier">integer</span></dt><dd><p>epochs for training of Variational AutoEncoder with Adam optimizer.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.setVAEEpsilon">
+<span class="sig-name descname"><span class="pre">setVAEEpsilon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.setVAEEpsilon" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the epsilon parameter for training of Variational AutoEncoder with Adam optimizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>epsilon</strong><span class="classifier">float</span></dt><dd><p>epsilon parameter for training of Variational AutoEncoder with Adam optimizer.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.setVAELearningRate">
+<span class="sig-name descname"><span class="pre">setVAELearningRate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">learning_rate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.setVAELearningRate" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the learning rate for training of Variational AutoEncoder with Adam optimizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>learning_rate</strong><span class="classifier">float</span></dt><dd><p>learning rate for training of Variational AutoEncoder with Adam optimizer.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.setVAEdimLayer1">
+<span class="sig-name descname"><span class="pre">setVAEdimLayer1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimLayer1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.setVAEdimLayer1" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the dimension of Layer1 of Variational AutoEncoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dimLayer1</strong><span class="classifier">integer</span></dt><dd><p>Dimension of the Layer 1 of the Variational AutoEncoder.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAE.setVAEdimLayer2">
+<span class="sig-name descname"><span class="pre">setVAEdimLayer2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimLayer2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAE.setVAEdimLayer2" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the dimension of Layer2 of Variational AutoEncoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dimLayer2</strong><span class="classifier">integer</span></dt><dd><p>Dimension of the Layer 2 of the Variational AutoEncoder.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="otCEISVAE.CEISVAEResult.html" title="CEISVAEResult"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../user_manual.html" title="API Reference"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">otCEISVAE 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../user_manual.html" >API Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CEISVAE</a></li> 
+      </ul>
+    </div>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+  </body>
+</html>

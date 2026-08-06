@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Example 2: Use of CEISVAE and modification of VAE parameters &#8212; otCEISVAE 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/openturns.css?v=8eaafb59" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Example 1: Use of CEISVAE on Four Branches function" href="plot_example1.html" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
+          rel='stylesheet' type='text/css' />
+ 
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../user_manual/user_manual.html">Doc</a></li>
+    <li><a href="../examples/examples.html">Examples</a></li>
+  </ul>
+  <a href="../index.html">
+    <h1>
+      <img src="../_static/logo-openturns-wo-bg.png" alt="" width=100px height=100px />
+      otCEISVAE
+    </h1>
+    <h2> Module otCEISVAE </h2>
+  </a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="plot_example1.html" title="Example 1: Use of CEISVAE on Four Branches function"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">otCEISVAE 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../examples/examples.html" accesskey="U">Examples</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Example 2: Use of CEISVAE and modification of VAE parameters</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../principle/principle.html">Cross-Entropy Importance Sampling Using Variational AutoEncoder</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_manual/user_manual.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="plot_example1.html"
+                          title="previous chapter">Example 1: Use of CEISVAE on Four Branches function</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/auto_examples/plot_example2.rst"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-plot-example2-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code</p>
+</div>
+<section class="sphx-glr-example-title" id="example-2-use-of-ceisvae-and-modification-of-vae-parameters">
+<span id="sphx-glr-auto-examples-plot-example2-py"></span><h1>Example 2: Use of CEISVAE and modification of VAE parameters<a class="headerlink" href="#example-2-use-of-ceisvae-and-modification-of-vae-parameters" title="Link to this heading">¶</a></h1>
+<p>This example aims to illustrate how to use the otCEISVAE module and the modification of the VAE parameters.</p>
+<div class="line-block">
+<div class="line">Loading python modules</div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">openturns</span> <span class="k">as</span> <span class="nn">ot</span>
+<span class="kn">import</span> <span class="nn">otCEISVAE</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="n">ot</span><span class="o">.</span><span class="n">RandomGenerator</span><span class="o">.</span><span class="n">SetSeed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">The considered reliability analysis problem is defined for a dimension d=100</div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">limitStateFunc</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">xnp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">xnp</span><span class="p">)</span>
+
+    <span class="n">xnp_squared</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">xnp</span><span class="p">,</span><span class="mf">2.</span><span class="p">)</span>
+    <span class="n">term1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">xnp_squared</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">term1</span><span class="o">-</span><span class="n">xnp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mf">4.5</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">g</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Definition of the parameters for CE-IS using VAE</div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># dimension of the reliability analysis problem</span>
+<span class="c1">#### Creation of an OpenTURNS Python function of input dimension d and output dimension 1</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">ot</span><span class="o">.</span><span class="n">PythonFunction</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">limitStateFunc</span><span class="p">)</span>
+<span class="c1">#### Creation of the PDF of input random vector</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="n">ot</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="c1">#### Definition of threshold</span>
+<span class="n">S</span>       <span class="o">=</span> <span class="mf">0.</span>
+<span class="c1">#### Definition of the failure event</span>
+<span class="n">vect</span>    <span class="o">=</span> <span class="n">ot</span><span class="o">.</span><span class="n">RandomVector</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+<span class="n">output</span>  <span class="o">=</span> <span class="n">ot</span><span class="o">.</span><span class="n">CompositeRandomVector</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">vect</span><span class="p">)</span>
+<span class="n">myEvent</span> <span class="o">=</span> <span class="n">ot</span><span class="o">.</span><span class="n">ThresholdEvent</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">ot</span><span class="o">.</span><span class="n">Less</span><span class="p">(),</span> <span class="n">S</span><span class="p">)</span>  <span class="c1"># definition of the threshold event</span>
+<span class="c1">#### Parameters for the Cross-Entropy Importance Sampling</span>
+<span class="n">quantileLevel</span>   <span class="o">=</span> <span class="mf">0.25</span>   <span class="c1"># quantile level for the steps</span>
+<span class="n">nbIS</span>            <span class="o">=</span> <span class="mi">10000</span>  <span class="c1"># number of Importance Sampling sample</span>
+<span class="n">maxNbSim</span>        <span class="o">=</span> <span class="mf">1e5</span>    <span class="c1"># maximum number of limit state function evaluations</span>
+<span class="c1">#### Parameters for the Variational AutoEncoder</span>
+<span class="n">latentDim</span>       <span class="o">=</span> <span class="mi">2</span>      <span class="c1"># dimension of the latent space for the VAE</span>
+<span class="n">nbCompVampPrior</span> <span class="o">=</span> <span class="mi">75</span>     <span class="c1"># number of components for the VampPrior</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Definition of the algorithm</div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">myAlgo</span> <span class="o">=</span> <span class="n">otCEISVAE</span><span class="o">.</span><span class="n">CEISVAE</span><span class="p">(</span><span class="n">myEvent</span><span class="p">,</span>
+                  <span class="n">quantileLevel</span><span class="p">,</span>
+                  <span class="n">nbIS</span><span class="o">=</span><span class="n">nbIS</span><span class="p">,</span>
+                  <span class="n">latentDim</span><span class="o">=</span><span class="n">latentDim</span><span class="p">,</span>
+                  <span class="n">nbCompVampPrior</span><span class="o">=</span><span class="n">nbCompVampPrior</span><span class="p">,</span>
+                  <span class="n">maxNbSim</span><span class="o">=</span><span class="n">maxNbSim</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Modification of the VAE parameters: it is possible to modify the dimension of the two VAE intermediate layers and to tune the parameters of training (number of epochs and batch size) and of the Adam optimizer (Beta1, Beta2, LearningRate, Epsilon) as follows :</div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">myAlgo</span><span class="o">.</span><span class="n">setVAEdimLayer1</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">myAlgo</span><span class="o">.</span><span class="n">setVAEdimLayer2</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">myAlgo</span><span class="o">.</span><span class="n">setVAEEpochs</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">myAlgo</span><span class="o">.</span><span class="n">setVAEBatchSize</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">myAlgo</span><span class="o">.</span><span class="n">setVAEBeta1</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span>
+<span class="n">myAlgo</span><span class="o">.</span><span class="n">setVAEBeta2</span><span class="p">(</span><span class="mf">0.999</span><span class="p">)</span>
+<span class="n">myAlgo</span><span class="o">.</span><span class="n">setVAEEpsilon</span><span class="p">(</span><span class="mf">1e-7</span><span class="p">)</span>
+<span class="n">myAlgo</span><span class="o">.</span><span class="n">setVAELearningRate</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Run of the algorithm and get the result</div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">myAlgo</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">myAlgo</span><span class="o">.</span><span class="n">getResult</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.9/dist-packages/keras/src/optimizers/base_optimizer.py:774: UserWarning: Gradients do not exist for variables [&#39;dense_39/kernel&#39;, &#39;dense_39/bias&#39;] when minimizing the loss. If using `model.compile()`, did you forget to provide a `loss` argument?
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/keras/src/optimizers/base_optimizer.py:774: UserWarning: Gradients do not exist for variables [&#39;dense_49/kernel&#39;, &#39;dense_49/bias&#39;] when minimizing the loss. If using `model.compile()`, did you forget to provide a `loss` argument?
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/keras/src/optimizers/base_optimizer.py:774: UserWarning: Gradients do not exist for variables [&#39;dense_59/kernel&#39;, &#39;dense_59/bias&#39;] when minimizing the loss. If using `model.compile()`, did you forget to provide a `loss` argument?
+  warnings.warn(
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Probability estimate, variance and simulation budget</div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Probability of failure :&#39;</span><span class="p">,</span><span class="n">result</span><span class="o">.</span><span class="n">getProbabilityEstimate</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of steps in the CE-IS using VAE algorithm :&#39;</span><span class="p">,</span><span class="n">result</span><span class="o">.</span><span class="n">getStepsNumber</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Simulation budget :&#39;</span><span class="p">,</span><span class="n">result</span><span class="o">.</span><span class="n">getOuterSampling</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Variance estimate :&#39;</span><span class="p">,</span><span class="n">result</span><span class="o">.</span><span class="n">getVarianceEstimate</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Probability of failure : 0.00039156483150321037
+Number of steps in the CE-IS using VAE algorithm : 4.0
+Simulation budget : 40000
+Variance estimate : 3.583934652321354e-08
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Draw of the VAE latent space (only possible if VAE latent space is of dimension 2)</div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">drawLatentSpace</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../_images/sphx_glr_plot_example2_001.png" srcset="../_images/sphx_glr_plot_example2_001.png" alt="2-dimensional latent space at the last iteration of the CE-VAE algorithm" class = "sphx-glr-single-img"/><div class="line-block">
+<div class="line">The figure represents the CE-IS samples at the final iteration in the latent space (the PDF and the samples).</div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (7 minutes 28.218 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-plot-example2-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/cd55f92c8d819b776c6a1e904e5efb23/plot_example2.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_example2.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/a8b175cd29751dc0229ceb76947711bf/plot_example2.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_example2.py</span></code></a></p>
+</div>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="plot_example1.html" title="Example 1: Use of CEISVAE on Four Branches function"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">otCEISVAE 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../examples/examples.html" >Examples</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Example 2: Use of CEISVAE and modification of VAE parameters</a></li> 
+      </ul>
+    </div>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+  </body>
+</html>

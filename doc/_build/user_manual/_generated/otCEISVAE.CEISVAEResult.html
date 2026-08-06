@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CEISVAEResult &#8212; otCEISVAE 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/openturns.css?v=8eaafb59" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script src="../../_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Examples" href="../../examples/examples.html" />
+    <link rel="prev" title="CEISVAE" href="otCEISVAE.CEISVAE.html" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
+          rel='stylesheet' type='text/css' />
+ 
+
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../user_manual.html">Doc</a></li>
+    <li><a href="../../examples/examples.html">Examples</a></li>
+  </ul>
+  <a href="../../index.html">
+    <h1>
+      <img src="../../_static/logo-openturns-wo-bg.png" alt="" width=100px height=100px />
+      otCEISVAE
+    </h1>
+    <h2> Module otCEISVAE </h2>
+  </a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../examples/examples.html" title="Examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="otCEISVAE.CEISVAE.html" title="CEISVAE"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">otCEISVAE 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../user_manual.html" accesskey="U">API Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CEISVAEResult</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../principle/principle.html">Cross-Entropy Importance Sampling Using Variational AutoEncoder</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../user_manual.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otCEISVAE.CEISVAE.html">CEISVAE</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CEISVAEResult</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/examples.html">Examples</a></li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="otCEISVAE.CEISVAE.html"
+                          title="previous chapter">CEISVAE</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../../examples/examples.html"
+                          title="next chapter">Examples</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/user_manual/_generated/otCEISVAE.CEISVAEResult.rst"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ceisvaeresult">
+<h1>CEISVAEResult<a class="headerlink" href="#ceisvaeresult" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CEISVAEResult</span></span><a class="headerlink" href="#otCEISVAE.CEISVAEResult" title="Link to this definition">¶</a></dt>
+<dd><p>Class implementing the result of Cross-Entropy Importance Sampling algorithm based on Variational AutoEncoder (VAE).</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.drawLatentSpace" title="otCEISVAE.CEISVAEResult.drawLatentSpace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drawLatentSpace</span></code></a>()</p></td>
+<td><p>Draw of the latent space if VAE latent space is in dimension 2</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getBlockSize" title="otCEISVAE.CEISVAEResult.getBlockSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getBlockSize</span></code></a>()</p></td>
+<td><p>Accessor to the block size.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getClassName" title="otCEISVAE.CEISVAEResult.getClassName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getClassName</span></code></a>()</p></td>
+<td><p>Accessor to the object's name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getInputAuxiliarySample" title="otCEISVAE.CEISVAEResult.getInputAuxiliarySample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputAuxiliarySample</span></code></a>(step)</p></td>
+<td><p>Accessor to the input auxiliary sample at a specific step.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getName" title="otCEISVAE.CEISVAEResult.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<td><p>Accessor to the object's name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getOuterSampling" title="otCEISVAE.CEISVAEResult.getOuterSampling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOuterSampling</span></code></a>()</p></td>
+<td><p>Accessor to the total number of limit state function evaluations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getOutputAuxiliarySample" title="otCEISVAE.CEISVAEResult.getOutputAuxiliarySample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutputAuxiliarySample</span></code></a>(step)</p></td>
+<td><p>Accessor to the output auxiliary sample at a specific step.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getProbabilityEstimate" title="otCEISVAE.CEISVAEResult.getProbabilityEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProbabilityEstimate</span></code></a>()</p></td>
+<td><p>Accessor to the probability estimate.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getStepsNumber" title="otCEISVAE.CEISVAEResult.getStepsNumber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStepsNumber</span></code></a>()</p></td>
+<td><p>Accessor to the number of steps in Cross-Entropy algorithm.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getThresholdPerStep" title="otCEISVAE.CEISVAEResult.getThresholdPerStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getThresholdPerStep</span></code></a>()</p></td>
+<td><p>Accessor to the intermediate thresholds in Cross-Entropy algorithm.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getTimeDuration" title="otCEISVAE.CEISVAEResult.getTimeDuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeDuration</span></code></a>()</p></td>
+<td><p>Accessor to the elapsed time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getVAE" title="otCEISVAE.CEISVAEResult.getVAE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVAE</span></code></a>()</p></td>
+<td><p>Accessor to Variational AutoEncoder at the final step.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.getVarianceEstimate" title="otCEISVAE.CEISVAEResult.getVarianceEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVarianceEstimate</span></code></a>()</p></td>
+<td><p>Accessor to the variance estimate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.hasName" title="otCEISVAE.CEISVAEResult.hasName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hasName</span></code></a>()</p></td>
+<td><p>Test if the object is named.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setBlockSize" title="otCEISVAE.CEISVAEResult.setBlockSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setBlockSize</span></code></a>(blockSize)</p></td>
+<td><p>Accessor to the block size.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setInputAuxiliarySample" title="otCEISVAE.CEISVAEResult.setInputAuxiliarySample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInputAuxiliarySample</span></code></a>(inputAuxiliarySample)</p></td>
+<td><p>Set up the input auxiliary sample.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setName" title="otCEISVAE.CEISVAEResult.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</p></td>
+<td><p>Accessor to the object's name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setOuterSampling" title="otCEISVAE.CEISVAEResult.setOuterSampling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOuterSampling</span></code></a>(outerSampling)</p></td>
+<td><p>Set up the total number of limit state function evaluations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setOutputAuxiliarySample" title="otCEISVAE.CEISVAEResult.setOutputAuxiliarySample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutputAuxiliarySample</span></code></a>(outputAuxiliarySample)</p></td>
+<td><p>Set up the output auxiliary sample.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setProbabilityEstimate" title="otCEISVAE.CEISVAEResult.setProbabilityEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setProbabilityEstimate</span></code></a>(proba)</p></td>
+<td><p>Set up the probability estimate.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setStepsNumber" title="otCEISVAE.CEISVAEResult.setStepsNumber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setStepsNumber</span></code></a>(stepsNumber)</p></td>
+<td><p>Set up the number of steps in Cross-Entropy algorithm.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setThresholdPerStep" title="otCEISVAE.CEISVAEResult.setThresholdPerStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setThresholdPerStep</span></code></a>(thresholdPerStep)</p></td>
+<td><p>Set up the intermediate thresholds in Cross-Entropy algorithm.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setTimeDuration" title="otCEISVAE.CEISVAEResult.setTimeDuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTimeDuration</span></code></a>(time)</p></td>
+<td><p>Accessor to the elapsed time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setVAE" title="otCEISVAE.CEISVAEResult.setVAE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVAE</span></code></a>(VAE)</p></td>
+<td><p>Set up the Variational AutoEncoder at the final step.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#otCEISVAE.CEISVAEResult.setVarianceEstimate" title="otCEISVAE.CEISVAEResult.setVarianceEstimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVarianceEstimate</span></code></a>(varianceEstimate)</p></td>
+<td><p>Set up the variance estimate.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.drawLatentSpace">
+<span class="sig-name descname"><span class="pre">drawLatentSpace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.drawLatentSpace" title="Link to this definition">¶</a></dt>
+<dd><p>Draw of the latent space if VAE latent space is in dimension 2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getBlockSize">
+<span class="sig-name descname"><span class="pre">getBlockSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getBlockSize" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the block size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>blockSize</strong><span class="classifier">int</span></dt><dd><p>Number of terms in the probability simulation estimator grouped together.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getClassName">
+<span class="sig-name descname"><span class="pre">getClassName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getClassName" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the object’s name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>class_name</strong><span class="classifier">str</span></dt><dd><p>The object class name (<cite>object.__class__.__name__</cite>).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getInputAuxiliarySample">
+<span class="sig-name descname"><span class="pre">getInputAuxiliarySample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getInputAuxiliarySample" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the input auxiliary sample at a specific step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>step: integer</strong></dt><dd><p>Step of interest for the input auxiliary sample.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getName">
+<span class="sig-name descname"><span class="pre">getName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getName" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the object’s name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>The name of the object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getOuterSampling">
+<span class="sig-name descname"><span class="pre">getOuterSampling</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getOuterSampling" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the total number of limit state function evaluations.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getOutputAuxiliarySample">
+<span class="sig-name descname"><span class="pre">getOutputAuxiliarySample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getOutputAuxiliarySample" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the output auxiliary sample at a specific step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>step: integer</strong></dt><dd><p>Step of interest for the output auxiliary sample.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getProbabilityEstimate">
+<span class="sig-name descname"><span class="pre">getProbabilityEstimate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getProbabilityEstimate" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the probability estimate.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getStepsNumber">
+<span class="sig-name descname"><span class="pre">getStepsNumber</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getStepsNumber" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the number of steps in Cross-Entropy algorithm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getThresholdPerStep">
+<span class="sig-name descname"><span class="pre">getThresholdPerStep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getThresholdPerStep" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the intermediate thresholds in Cross-Entropy algorithm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getTimeDuration">
+<span class="sig-name descname"><span class="pre">getTimeDuration</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getTimeDuration" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the elapsed time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>time</strong><span class="classifier">float</span></dt><dd><p>Simulation duration in seconds</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getVAE">
+<span class="sig-name descname"><span class="pre">getVAE</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getVAE" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to Variational AutoEncoder at the final step.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.getVarianceEstimate">
+<span class="sig-name descname"><span class="pre">getVarianceEstimate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.getVarianceEstimate" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the variance estimate.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.hasName">
+<span class="sig-name descname"><span class="pre">hasName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.hasName" title="Link to this definition">¶</a></dt>
+<dd><p>Test if the object is named.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>hasName</strong><span class="classifier">bool</span></dt><dd><p>True if the name is not empty.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setBlockSize">
+<span class="sig-name descname"><span class="pre">setBlockSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blockSize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setBlockSize" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the block size.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>blockSize</strong><span class="classifier">int, <img class="math" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPCEtLSBUaGlzIGZpbGUgd2FzIGdlbmVyYXRlZCBieSBkdmlzdmdtIDIuMTEuMSAtLT4KPHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHdpZHRoPSc3MC45NTk3OTJwdCcgaGVpZ2h0PSc5LjkyNzc0OHB0JyB2aWV3Qm94PScwIC04LjMwMjE5MSA3MC45NTk3OTIgOS45Mjc3NDgnPgo8ZGVmcz4KPHBhdGggaWQ9J2cyLTQ4JyBkPSdNNS4zNTU5MTUtMy44MjU2NTRDNS4zNTU5MTUtNC44MTc5MzMgNS4yOTYxMzktNS43ODYzMDEgNC44NjU3NTMtNi42OTQ4OTRDNC4zNzU1OTItNy42ODcxNzMgMy41MTQ4MTktNy45NTAxODcgMi45MjkwMTYtNy45NTAxODdDMi4yMzU2MTYtNy45NTAxODcgMS4zODY4LTcuNjAzNDg3IC45NDQ0NTgtNi42MTEyMDhDLjYwOTcxNC01Ljg1ODAzMiAuNDkwMTYyLTUuMTE2ODEyIC40OTAxNjItMy44MjU2NTRDLjQ5MDE2Mi0yLjY2NjAwMiAuNTczODQ4LTEuNzkzMjc1IDEuMDA0MjM0LS45NDQ0NThDMS40NzA0ODYtLjAzNTg2NiAyLjI5NTM5MiAuMjUxMDU5IDIuOTE3MDYxIC4yNTEwNTlDMy45NTcxNjEgLjI1MTA1OSA0LjU1NDkxOS0uMzcwNjEgNC45MDE2MTktMS4wNjQwMUM1LjMzMjAwNS0xLjk2MDY0OCA1LjM1NTkxNS0zLjEzMjI1NCA1LjM1NTkxNS0zLjgyNTY1NFpNMi45MTcwNjEgLjAxMTk1NUMyLjUzNDQ5NiAuMDExOTU1IDEuNzU3NDEtLjIwMzIzOCAxLjUzMDI2Mi0xLjUwNjM1MUMxLjM5ODc1NS0yLjIyMzY2MSAxLjM5ODc1NS0zLjEzMjI1NCAxLjM5ODc1NS0zLjk2OTExNkMxLjM5ODc1NS00Ljk0OTQ0IDEuMzk4NzU1LTUuODM0MTIyIDEuNTkwMDM3LTYuNTM5NDc3QzEuNzkzMjc1LTcuMzQwNDczIDIuNDAyOTg5LTcuNzExMDgzIDIuOTE3MDYxLTcuNzExMDgzQzMuMzcxMzU3LTcuNzExMDgzIDQuMDY0NzU3LTcuNDM2MTE1IDQuMjkxOTA1LTYuNDA3OTdDNC40NDczMjMtNS43MjY1MjYgNC40NDczMjMtNC43ODIwNjcgNC40NDczMjMtMy45NjkxMTZDNC40NDczMjMtMy4xNjgxMiA0LjQ0NzMyMy0yLjI1OTUyNyA0LjMxNTgxNi0xLjUzMDI2MkM0LjA4ODY2Ny0uMjE1MTkzIDMuMzM1NDkyIC4wMTE5NTUgMi45MTcwNjEgLjAxMTk1NVonLz4KPHBhdGggaWQ9J2cwLTIxJyBkPSdNOC4wNTc3ODMtMy44NzM0NzRDOC4yMjUxNTYtMy45NDUyMDUgOC4yOTY4ODctNC4wMjg4OTIgOC4yOTY4ODctNC4xMzY0ODhDOC4yOTY4ODctNC4yNTYwNCA4LjI0OTA2Ni00LjMyNzc3MSA4LjA1Nzc4My00LjQxMTQ1N0wxLjQ3MDQ4Ni03LjUxOTgwMUMxLjMwMzExMy03LjYwMzQ4NyAxLjI1NTI5My03LjYwMzQ4NyAxLjIzMTM4Mi03LjYwMzQ4N0MxLjA4NzkyLTcuNjAzNDg3IC45OTIyNzktNy40OTU4OSAuOTkyMjc5LTcuMzY0Mzg0Qy45OTIyNzktNy4yMjA5MjIgMS4wODc5Mi03LjE2MTE0NiAxLjIxOTQyNy03LjEwMTM3TDcuNDk1ODktNC4xNDg0NDNMMS4yNDMzMzctMS4xOTU1MTdDMS4wMDQyMzQtMS4wODc5MiAuOTkyMjc5LS45OTIyNzkgLjk5MjI3OS0uOTIwNTQ4Qy45OTIyNzktLjc4OTA0MSAxLjA5OTg3NS0uNjgxNDQ1IDEuMjMxMzgyLS42ODE0NDVDMS4yNjcyNDgtLjY4MTQ0NSAxLjI5MTE1OC0uNjgxNDQ1IDEuNDQ2NTc1LS43NjUxMzFMOC4wNTc3ODMtMy44NzM0NzRaTTcuODc4NDU2IDEuNjM3ODU4QzguMDgxNjk0IDEuNjM3ODU4IDguMjk2ODg3IDEuNjM3ODU4IDguMjk2ODg3IDEuMzk4NzU1UzguMDQ1ODI4IDEuMTU5NjUxIDcuODY2NTAxIDEuMTU5NjUxSDEuNDIyNjY1QzEuMjQzMzM3IDEuMTU5NjUxIC45OTIyNzkgMS4xNTk2NTEgLjk5MjI3OSAxLjM5ODc1NVMxLjIwNzQ3MiAxLjYzNzg1OCAxLjQxMDcxIDEuNjM3ODU4SDcuODc4NDU2WicvPgo8cGF0aCBpZD0nZzEtODMnIGQ9J003LjU5MTUzMi04LjMwODg0MkM3LjU5MTUzMi04LjQxNjQzOCA3LjUwNzg0Ni04LjQxNjQzOCA3LjQ4MzkzNS04LjQxNjQzOEM3LjQzNjExNS04LjQxNjQzOCA3LjQyNDE1OS04LjQwNDQ4MyA3LjI4MDY5Ny04LjIyNTE1NkM3LjIwODk2Ni04LjE0MTQ2OSA2LjcxODgwNC03LjUxOTgwMSA2LjcwNjg0OS03LjUwNzg0NkM2LjMxMjMyOS04LjI4NDkzMiA1LjUyMzI4OC04LjQxNjQzOCA1LjAyMTE3MS04LjQxNjQzOEMzLjUwMjg2NC04LjQxNjQzOCAyLjEyODAyLTcuMDI5NjM5IDIuMTI4MDItNS42Nzg3MDVDMi4xMjgwMi00Ljc4MjA2NyAyLjY2NjAwMi00LjI1NjA0IDMuMjUxODA2LTQuMDUyODAyQzMuMzgzMzEzLTQuMDA0OTgxIDQuMDg4NjY3LTMuODEzNjk5IDQuNDQ3MzIzLTMuNzMwMDEyQzUuMDU3MDM2LTMuNTYyNjQgNS4yMTI0NTMtMy41MTQ4MTkgNS40NjM1MTItMy4yNTE4MDZDNS41MTEzMzMtMy4xOTIwMyA1Ljc1MDQzNi0yLjkxNzA2MSA1Ljc1MDQzNi0yLjM1NTE2OEM1Ljc1MDQzNi0xLjI0MzMzNyA0LjcyMjI5MS0uMDk1NjQxIDMuNTI2Nzc1LS4wOTU2NDFDMi41NDY0NTEtLjA5NTY0MSAxLjQ1ODUzMS0uNTE0MDcyIDEuNDU4NTMxLTEuODUzMDUxQzEuNDU4NTMxLTIuMDgwMTk5IDEuNTA2MzUxLTIuMzY3MTIzIDEuNTQyMjE3LTIuNDg2Njc1QzEuNTQyMjE3LTIuNTIyNTQgMS41NTQxNzItMi41ODIzMTYgMS41NTQxNzItMi42MDYyMjdDMS41NTQxNzItMi42NTQwNDcgMS41MzAyNjItMi43MTM4MjMgMS40MzQ2Mi0yLjcxMzgyM0MxLjMyNzAyNC0yLjcxMzgyMyAxLjMxNTA2OC0yLjY4OTkxMyAxLjI2NzI0OC0yLjQ4NjY3NUwuNjU3NTM0LS4wMzU4NjZDLjY1NzUzNC0uMDIzOTEgLjYwOTcxNCAuMTMxNTA3IC42MDk3MTQgLjE0MzQ2MkMuNjA5NzE0IC4yNTEwNTkgLjcwNTM1NSAuMjUxMDU5IC43MjkyNjUgLjI1MTA1OUMuNzc3MDg2IC4yNTEwNTkgLjc4OTA0MSAuMjM5MTAzIC45MzI1MDMgLjA1OTc3NkwxLjQ4MjQ0MS0uNjU3NTM0QzEuNzY5MzY1LS4yMjcxNDggMi4zOTEwMzQgLjI1MTA1OSAzLjUwMjg2NCAuMjUxMDU5QzUuMDQ1MDgxIC4yNTEwNTkgNi40NTU3OTEtMS4yNDMzMzcgNi40NTU3OTEtMi43Mzc3MzNDNi40NTU3OTEtMy4yMzk4NTEgNi4zMzYyMzktMy42ODIxOTIgNS44ODE5NDMtNC4xMjQ1MzNDNS42MzA4ODQtNC4zNzU1OTIgNS40MTU2OTEtNC40MzUzNjcgNC4zMTU4MTYtNC43MjIyOTFDMy41MTQ4MTktNC45Mzc0ODQgMy40MDcyMjMtNC45NzMzNSAzLjE5MjAzLTUuMTY0NjMzQzIuOTg4NzkyLTUuMzY3ODcgMi44MzMzNzUtNS42NTQ3OTUgMi44MzMzNzUtNi4wNjEyN0MyLjgzMzM3NS03LjA2NTUwNCAzLjg0OTU2NC04LjA5MzY0OSA0Ljk4NTMwNS04LjA5MzY0OUM2LjE1NjkxMi04LjA5MzY0OSA2LjcwNjg0OS03LjM3NjMzOSA2LjcwNjg0OS02LjI0MDU5OEM2LjcwNjg0OS01LjkyOTc2MyA2LjY0NzA3My01LjYwNjk3NCA2LjY0NzA3My01LjU1OTE1M0M2LjY0NzA3My01LjQ1MTU1NyA2Ljc0MjcxNS01LjQ1MTU1NyA2Ljc3ODU4LTUuNDUxNTU3QzYuODg2MTc3LTUuNDUxNTU3IDYuODk4MTMyLTUuNDg3NDIyIDYuOTQ1OTUzLTUuNjc4NzA1TDcuNTkxNTMyLTguMzA4ODQyWicvPgo8cGF0aCBpZD0nZzEtOTgnIGQ9J00yLjc2MTY0NC03Ljk5ODAwN0MyLjc3MzU5OS04LjA0NTgyOCAyLjc5NzUwOS04LjExNzU1OSAyLjc5NzUwOS04LjE3NzMzNUMyLjc5NzUwOS04LjI5Njg4NyAyLjY3Nzk1OC04LjI5Njg4NyAyLjY1NDA0Ny04LjI5Njg4N0MyLjY0MjA5Mi04LjI5Njg4NyAyLjIxMTcwNi04LjI2MTAyMSAxLjk5NjUxMy04LjIzNzExMUMxLjc5MzI3NS04LjIyNTE1NiAxLjYxMzk0OC04LjIwMTI0NSAxLjM5ODc1NS04LjE4OTI5QzEuMTExODMxLTguMTY1MzggMS4wMjgxNDQtOC4xNTM0MjUgMS4wMjgxNDQtNy45MzgyMzJDMS4wMjgxNDQtNy44MTg2OCAxLjE0NzY5Ni03LjgxODY4IDEuMjY3MjQ4LTcuODE4NjhDMS44NzY5NjEtNy44MTg2OCAxLjg3Njk2MS03LjcxMTA4MyAxLjg3Njk2MS03LjU5MTUzMkMxLjg3Njk2MS03LjUwNzg0NiAxLjc4MTMyLTcuMTYxMTQ2IDEuNzMzNDk5LTYuOTQ1OTUzTDEuNDQ2NTc1LTUuNzk4MjU3QzEuMzI3MDI0LTUuMzIwMDUgLjY0NTU3OS0yLjYwNjIyNyAuNTk3NzU4LTIuMzkxMDM0Qy41Mzc5ODMtMi4wOTIxNTQgLjUzNzk4My0xLjg4ODkxNyAuNTM3OTgzLTEuNzMzNDk5Qy41Mzc5ODMtLjUxNDA3MiAxLjIxOTQyNyAuMTE5NTUyIDEuOTk2NTEzIC4xMTk1NTJDMy4zODMzMTMgLjExOTU1MiA0LjgxNzkzMy0xLjY2MTc2OCA0LjgxNzkzMy0zLjM5NTI2OEM0LjgxNzkzMy00LjQ5NTE0MyA0LjE5NjI2NC01LjI3MjIyOSAzLjI5OTYyNi01LjI3MjIyOUMyLjY3Nzk1OC01LjI3MjIyOSAyLjExNjA2NS00Ljc1ODE1NyAxLjg4ODkxNy00LjUxOTA1NEwyLjc2MTY0NC03Ljk5ODAwN1pNMi4wMDg0NjgtLjExOTU1MkMxLjYyNTkwMy0uMTE5NTUyIDEuMjA3NDcyLS40MDY0NzYgMS4yMDc0NzItMS4zMzg5NzlDMS4yMDc0NzItMS43MzM0OTkgMS4yNDMzMzctMS45NjA2NDggMS40NTg1MzEtMi43OTc1MDlDMS40OTQzOTYtMi45NTI5MjcgMS42ODU2NzktMy43MTgwNTcgMS43MzM0OTktMy44NzM0NzRDMS43NTc0MS0zLjk2OTExNiAyLjQ2Mjc2NS01LjAzMzEyNiAzLjI3NTcxNi01LjAzMzEyNkMzLjgwMTc0My01LjAzMzEyNiA0LjA0MDg0Ny00LjUwNzA5OCA0LjA0MDg0Ny0zLjg4NTQzQzQuMDQwODQ3LTMuMzExNTgyIDMuNzA2MTAyLTEuOTYwNjQ4IDMuNDA3MjIzLTEuMzM4OTc5QzMuMTA4MzQ0LS42OTM0IDIuNTU4NDA2LS4xMTk1NTIgMi4wMDg0NjgtLjExOTU1MlonLz4KPHBhdGggaWQ9J2cxLTk5JyBkPSdNNC42NzQ0NzEtNC40OTUxNDNDNC40NDczMjMtNC40OTUxNDMgNC4zMzk3MjYtNC40OTUxNDMgNC4xNzIzNTQtNC4zNTE2ODFDNC4xMDA2MjMtNC4yOTE5MDUgMy45NjkxMTYtNC4xMTI1NzggMy45NjkxMTYtMy45MjEyOTVDMy45NjkxMTYtMy42ODIxOTIgNC4xNDg0NDMtMy41Mzg3MyA0LjM3NTU5Mi0zLjUzODczQzQuNjYyNTE2LTMuNTM4NzMgNC45ODUzMDUtMy43Nzc4MzMgNC45ODUzMDUtNC4yNTYwNEM0Ljk4NTMwNS00LjgyOTg4OCA0LjQzNTM2Ny01LjI3MjIyOSAzLjYxMDQ2MS01LjI3MjIyOUMyLjA0NDMzNC01LjI3MjIyOSAuNDc4MjA3LTMuNTYyNjQgLjQ3ODIwNy0xLjg2NTAwNkMuNDc4MjA3LS44MjQ5MDcgMS4xMjM3ODYgLjExOTU1MiAyLjM0MzIxMyAuMTE5NTUyQzMuOTY5MTE2IC4xMTk1NTIgNC45OTcyNi0xLjE0NzY5NiA0Ljk5NzI2LTEuMzAzMTEzQzQuOTk3MjYtMS4zNzQ4NDQgNC45MjU1MjktMS40MzQ2MiA0Ljg3NzcwOS0xLjQzNDYyQzQuODQxODQzLTEuNDM0NjIgNC44Mjk4ODgtMS40MjI2NjUgNC43MjIyOTEtMS4zMTUwNjhDMy45NTcxNjEtLjI5ODg3OSAyLjgyMTQyLS4xMTk1NTIgMi4zNjcxMjMtLjExOTU1MkMxLjU0MjIxNy0uMTE5NTUyIDEuMjc5MjAzLS44MzY4NjIgMS4yNzkyMDMtMS40MzQ2MkMxLjI3OTIwMy0xLjg1MzA1MSAxLjQ4MjQ0MS0zLjAxMjcwMiAxLjkxMjgyNy0zLjgyNTY1NEMyLjIyMzY2MS00LjM4NzU0NyAyLjg2OTI0LTUuMDMzMTI2IDMuNjIyNDE2LTUuMDMzMTI2QzMuNzc3ODMzLTUuMDMzMTI2IDQuNDM1MzY3LTUuMDA5MjE1IDQuNjc0NDcxLTQuNDk1MTQzWicvPgo8cGF0aCBpZD0nZzEtMTAxJyBkPSdNMi4xMzk5NzUtMi43NzM1OTlDMi40NjI3NjUtMi43NzM1OTkgMy4yNzU3MTYtMi43OTc1MDkgMy44NDk1NjQtMy4wMTI3MDJDNC43NTgxNTctMy4zNTk0MDIgNC44NDE4NDMtNC4wNTI4MDIgNC44NDE4NDMtNC4yNjc5OTVDNC44NDE4NDMtNC43OTQwMjIgNC4zODc1NDctNS4yNzIyMjkgMy41OTg1MDYtNS4yNzIyMjlDMi4zNDMyMTMtNS4yNzIyMjkgLjUzNzk4My00LjEzNjQ4OCAuNTM3OTgzLTIuMDA4NDY4Qy41Mzc5ODMtLjc1MzE3NiAxLjI1NTI5MyAuMTE5NTUyIDIuMzQzMjEzIC4xMTk1NTJDMy45NjkxMTYgLjExOTU1MiA0Ljk5NzI2LTEuMTQ3Njk2IDQuOTk3MjYtMS4zMDMxMTNDNC45OTcyNi0xLjM3NDg0NCA0LjkyNTUyOS0xLjQzNDYyIDQuODc3NzA5LTEuNDM0NjJDNC44NDE4NDMtMS40MzQ2MiA0LjgyOTg4OC0xLjQyMjY2NSA0LjcyMjI5MS0xLjMxNTA2OEMzLjk1NzE2MS0uMjk4ODc5IDIuODIxNDItLjExOTU1MiAyLjM2NzEyMy0uMTE5NTUyQzEuNjg1Njc5LS4xMTk1NTIgMS4zMjcwMjQtLjY1NzUzNCAxLjMyNzAyNC0xLjU0MjIxN0MxLjMyNzAyNC0xLjcwOTU4OSAxLjMyNzAyNC0yLjAwODQ2OCAxLjUwNjM1MS0yLjc3MzU5OUgyLjEzOTk3NVpNMS41NjYxMjctMy4wMTI3MDJDMi4wODAxOTktNC44NTM3OTggMy4yMTU5NC01LjAzMzEyNiAzLjU5ODUwNi01LjAzMzEyNkM0LjEyNDUzMy01LjAzMzEyNiA0LjQ4MzE4OC00LjcyMjI5MSA0LjQ4MzE4OC00LjI2Nzk5NUM0LjQ4MzE4OC0zLjAxMjcwMiAyLjU3MDM2MS0zLjAxMjcwMiAyLjA2ODI0NC0zLjAxMjcwMkgxLjU2NjEyN1onLz4KPHBhdGggaWQ9J2cxLTEwNScgZD0nTTMuMzgzMzEzLTEuNzA5NTg5QzMuMzgzMzEzLTEuNzY5MzY1IDMuMzM1NDkyLTEuODE3MTg2IDMuMjYzNzYxLTEuODE3MTg2QzMuMTU2MTY0LTEuODE3MTg2IDMuMTQ0MjA5LTEuNzgxMzIgMy4wODQ0MzMtMS41NzgwODJDMi43NzM1OTktLjQ5MDE2MiAyLjI4MzQzNy0uMTE5NTUyIDEuODg4OTE3LS4xMTk1NTJDMS43NDU0NTUtLjExOTU1MiAxLjU3ODA4Mi0uMTU1NDE3IDEuNTc4MDgyLS41MTQwNzJDMS41NzgwODItLjgzNjg2MiAxLjcyMTU0NC0xLjE5NTUxNyAxLjg1MzA1MS0xLjU1NDE3MkwyLjY4OTkxMy0zLjc3NzgzM0MyLjcyNTc3OC0zLjg3MzQ3NCAyLjgwOTQ2NS00LjA4ODY2NyAyLjgwOTQ2NS00LjMxNTgxNkMyLjgwOTQ2NS00LjgxNzkzMyAyLjQ1MDgwOS01LjI3MjIyOSAxLjg2NTAwNi01LjI3MjIyOUMuNzY1MTMxLTUuMjcyMjI5IC4zMjI3OS0zLjUzODczIC4zMjI3OS0zLjQ0MzA4OEMuMzIyNzktMy4zOTUyNjggLjM3MDYxLTMuMzM1NDkyIC40NTQyOTYtMy4zMzU0OTJDLjU2MTg5My0zLjMzNTQ5MiAuNTczODQ4LTMuMzgzMzEzIC42MjE2NjktMy41NTA2ODVDLjkwODU5My00LjU1NDkxOSAxLjM2Mjg4OS01LjAzMzEyNiAxLjgyOTE0MS01LjAzMzEyNkMxLjkzNjczNy01LjAzMzEyNiAyLjEzOTk3NS01LjAyMTE3MSAyLjEzOTk3NS00LjYzODYwNUMyLjEzOTk3NS00LjMyNzc3MSAxLjk4NDU1OC0zLjkzMzI1IDEuODg4OTE3LTMuNjcwMjM3TDEuMDUyMDU1LTEuNDQ2NTc1Qy45ODAzMjQtMS4yNTUyOTMgLjkwODU5My0xLjA2NDAxIC45MDg1OTMtLjg0ODgxN0MuOTA4NTkzLS4zMTA4MzQgMS4yNzkyMDMgLjExOTU1MiAxLjg1MzA1MSAuMTE5NTUyQzIuOTUyOTI3IC4xMTk1NTIgMy4zODMzMTMtMS42MjU5MDMgMy4zODMzMTMtMS43MDk1ODlaTTMuMjg3NjcxLTcuNDYwMDI1QzMuMjg3NjcxLTcuNjM5MzUyIDMuMTQ0MjA5LTcuODU0NTQ1IDIuODgxMTk2LTcuODU0NTQ1QzIuNjA2MjI3LTcuODU0NTQ1IDIuMjk1MzkyLTcuNTkxNTMyIDIuMjk1MzkyLTcuMjgwNjk3QzIuMjk1MzkyLTYuOTgxODE4IDIuNTQ2NDUxLTYuODg2MTc3IDIuNjg5OTEzLTYuODg2MTc3QzMuMDEyNzAyLTYuODg2MTc3IDMuMjg3NjcxLTcuMTk3MDExIDMuMjg3NjcxLTcuNDYwMDI1WicvPgo8cGF0aCBpZD0nZzEtMTA3JyBkPSdNMy4zNTk0MDItNy45OTgwMDdDMy4zNzEzNTctOC4wNDU4MjggMy4zOTUyNjgtOC4xMTc1NTkgMy4zOTUyNjgtOC4xNzczMzVDMy4zOTUyNjgtOC4yOTY4ODcgMy4yNzU3MTYtOC4yOTY4ODcgMy4yNTE4MDYtOC4yOTY4ODdDMy4yMzk4NTEtOC4yOTY4ODcgMi44MDk0NjUtOC4yNjEwMjEgMi41OTQyNzEtOC4yMzcxMTFDMi4zOTEwMzQtOC4yMjUxNTYgMi4yMTE3MDYtOC4yMDEyNDUgMS45OTY1MTMtOC4xODkyOUMxLjcwOTU4OS04LjE2NTM4IDEuNjI1OTAzLTguMTUzNDI1IDEuNjI1OTAzLTcuOTM4MjMyQzEuNjI1OTAzLTcuODE4NjggMS43NDU0NTUtNy44MTg2OCAxLjg2NTAwNi03LjgxODY4QzIuNDc0NzItNy44MTg2OCAyLjQ3NDcyLTcuNzExMDgzIDIuNDc0NzItNy41OTE1MzJDMi40NzQ3Mi03LjU0MzcxMSAyLjQ3NDcyLTcuNTE5ODAxIDIuNDE0OTQ0LTcuMzA0NjA4TC43MDUzNTUtLjQ2NjI1MkMuNjU3NTM0LS4yODY5MjQgLjY1NzUzNC0uMjYzMDE0IC42NTc1MzQtLjE5MTI4M0MuNjU3NTM0IC4wNzE3MzEgLjg2MDc3MiAuMTE5NTUyIC45ODAzMjQgLjExOTU1MkMxLjMxNTA2OCAuMTE5NTUyIDEuMzg2OC0uMTQzNDYyIDEuNDgyNDQxLS41MTQwNzJMMi4wNDQzMzQtMi43NDk2ODlDMi45MDUxMDYtMi42NTQwNDcgMy40MTkxNzgtMi4yOTUzOTIgMy40MTkxNzgtMS43MjE1NDRDMy40MTkxNzgtMS42NDk4MTMgMy40MTkxNzgtMS42MDE5OTMgMy4zODMzMTMtMS40MjI2NjVDMy4zMzU0OTItMS4yNDMzMzcgMy4zMzU0OTItMS4wOTk4NzUgMy4zMzU0OTItMS4wNDAxQzMuMzM1NDkyLS4zNDY3IDMuNzg5Nzg4IC4xMTk1NTIgNC4zOTk1MDIgLjExOTU1MkM0Ljk0OTQ0IC4xMTk1NTIgNS4yMzYzNjQtLjM4MjU2NSA1LjMzMjAwNS0uNTQ5OTM4QzUuNTgzMDY0LS45OTIyNzkgNS43Mzg0ODEtMS42NjE3NjggNS43Mzg0ODEtMS43MDk1ODlDNS43Mzg0ODEtMS43NjkzNjUgNS42OTA2Ni0xLjgxNzE4NiA1LjYxODkyOS0xLjgxNzE4NkM1LjUxMTMzMy0xLjgxNzE4NiA1LjQ5OTM3Ny0xLjc2OTM2NSA1LjQ1MTU1Ny0xLjU3ODA4MkM1LjI4NDE4NC0uOTU2NDEzIDUuMDMzMTI2LS4xMTk1NTIgNC40MjM0MTItLjExOTU1MkM0LjE4NDMwOS0uMTE5NTUyIDQuMDI4ODkyLS4yMzkxMDMgNC4wMjg4OTItLjY5MzRDNC4wMjg4OTItLjkyMDU0OCA0LjA3NjcxMi0xLjE4MzU2MiA0LjEyNDUzMy0xLjM2Mjg4OUM0LjE3MjM1NC0xLjU3ODA4MiA0LjE3MjM1NC0xLjU5MDAzNyA0LjE3MjM1NC0xLjczMzQ5OUM0LjE3MjM1NC0yLjQzODg1NCAzLjUzODczLTIuODMzMzc1IDIuNDM4ODU0LTIuOTc2ODM3QzIuODY5MjQtMy4yMzk4NTEgMy4yOTk2MjYtMy43MDYxMDIgMy40NjY5OTktMy44ODU0M0M0LjE0ODQ0My00LjY1MDU2IDQuNjE0Njk1LTUuMDMzMTI2IDUuMTY0NjMzLTUuMDMzMTI2QzUuNDM5NjAxLTUuMDMzMTI2IDUuNTExMzMzLTQuOTYxMzk1IDUuNTk1MDE5LTQuODg5NjY0QzUuMTUyNjc3LTQuODQxODQzIDQuOTg1MzA1LTQuNTMxMDA5IDQuOTg1MzA1LTQuMjkxOTA1QzQuOTg1MzA1LTQuMDA0OTgxIDUuMjEyNDUzLTMuOTA5MzQgNS4zNzk4MjYtMy45MDkzNEM1LjcwMjYxNS0zLjkwOTM0IDUuOTg5NTM5LTQuMTg0MzA5IDUuOTg5NTM5LTQuNTY2ODc0QzUuOTg5NTM5LTQuOTEzNTc0IDUuNzE0NTctNS4yNzIyMjkgNS4xNzY1ODgtNS4yNzIyMjlDNC41MTkwNTQtNS4yNzIyMjkgMy45ODEwNzEtNC44MDU5NzggMy4xMzIyNTQtMy44NDk1NjRDMy4wMTI3MDItMy43MDYxMDIgMi41NzAzNjEtMy4yNTE4MDYgMi4xMjgwMi0zLjA4NDQzM0wzLjM1OTQwMi03Ljk5ODAwN1onLz4KPHBhdGggaWQ9J2cxLTEwOCcgZD0nTTMuMDM2NjEzLTcuOTk4MDA3QzMuMDQ4NTY4LTguMDQ1ODI4IDMuMDcyNDc4LTguMTE3NTU5IDMuMDcyNDc4LTguMTc3MzM1QzMuMDcyNDc4LTguMjk2ODg3IDIuOTUyOTI3LTguMjk2ODg3IDIuOTI5MDE2LTguMjk2ODg3QzIuOTE3MDYxLTguMjk2ODg3IDIuNDg2Njc1LTguMjYxMDIxIDIuMjcxNDgyLTguMjM3MTExQzIuMDY4MjQ0LTguMjI1MTU2IDEuODg4OTE3LTguMjAxMjQ1IDEuNjczNzI0LTguMTg5MjlDMS4zODY4LTguMTY1MzggMS4zMDMxMTMtOC4xNTM0MjUgMS4zMDMxMTMtNy45MzgyMzJDMS4zMDMxMTMtNy44MTg2OCAxLjQyMjY2NS03LjgxODY4IDEuNTQyMjE3LTcuODE4NjhDMi4xNTE5My03LjgxODY4IDIuMTUxOTMtNy43MTEwODMgMi4xNTE5My03LjU5MTUzMkMyLjE1MTkzLTcuNTQzNzExIDIuMTUxOTMtNy41MTk4MDEgMi4wOTIxNTQtNy4zMDQ2MDhMLjYwOTcxNC0xLjM3NDg0NEMuNTczODQ4LTEuMjQzMzM3IC41NDk5MzgtMS4xNDc2OTYgLjU0OTkzOC0uOTU2NDEzQy41NDk5MzgtLjM1ODY1NSAuOTkyMjc5IC4xMTk1NTIgMS42MDE5OTMgLjExOTU1MkMxLjk5NjUxMyAuMTE5NTUyIDIuMjU5NTI3LS4xNDM0NjIgMi40NTA4MDktLjUxNDA3MkMyLjY1NDA0Ny0uOTA4NTkzIDIuODIxNDItMS42NjE3NjggMi44MjE0Mi0xLjcwOTU4OUMyLjgyMTQyLTEuNzY5MzY1IDIuNzczNTk5LTEuODE3MTg2IDIuNzAxODY4LTEuODE3MTg2QzIuNTk0MjcxLTEuODE3MTg2IDIuNTgyMzE2LTEuNzU3NDEgMi41MzQ0OTYtMS41NzgwODJDMi4zMTkzMDMtLjc1MzE3NiAyLjEwNDExLS4xMTk1NTIgMS42MjU5MDMtLjExOTU1MkMxLjI2NzI0OC0uMTE5NTUyIDEuMjY3MjQ4LS41MDIxMTcgMS4yNjcyNDgtLjY2OTQ4OUMxLjI2NzI0OC0uNzE3MzEgMS4yNjcyNDgtLjk2ODM2OSAxLjM1MDkzNC0xLjMwMzExM0wzLjAzNjYxMy03Ljk5ODAwN1onLz4KPHBhdGggaWQ9J2cxLTExMScgZD0nTTUuNDUxNTU3LTMuMjg3NjcxQzUuNDUxNTU3LTQuNDIzNDEyIDQuNzEwMzM2LTUuMjcyMjI5IDMuNjIyNDE2LTUuMjcyMjI5QzIuMDQ0MzM0LTUuMjcyMjI5IC40OTAxNjItMy41NTA2ODUgLjQ5MDE2Mi0xLjg2NTAwNkMuNDkwMTYyLS43MjkyNjUgMS4yMzEzODIgLjExOTU1MiAyLjMxOTMwMyAuMTE5NTUyQzMuOTA5MzQgLjExOTU1MiA1LjQ1MTU1Ny0xLjYwMTk5MyA1LjQ1MTU1Ny0zLjI4NzY3MVpNMi4zMzEyNTgtLjExOTU1MkMxLjczMzQ5OS0uMTE5NTUyIDEuMjkxMTU4LS41OTc3NTggMS4yOTExNTgtMS40MzQ2MkMxLjI5MTE1OC0xLjk4NDU1OCAxLjU3ODA4Mi0zLjIwMzk4NSAxLjkxMjgyNy0zLjgwMTc0M0MyLjQ1MDgwOS00LjcyMjI5MSAzLjEyMDI5OS01LjAzMzEyNiAzLjYxMDQ2MS01LjAzMzEyNkM0LjE5NjI2NC01LjAzMzEyNiA0LjY1MDU2LTQuNTU0OTE5IDQuNjUwNTYtMy43MTgwNTdDNC42NTA1Ni0zLjIzOTg1MSA0LjM5OTUwMi0xLjk2MDY0OCAzLjk0NTIwNS0xLjIzMTM4MkMzLjQ1NTA0NC0uNDMwMzg2IDIuNzk3NTA5LS4xMTk1NTIgMi4zMzEyNTgtLjExOTU1MlonLz4KPHBhdGggaWQ9J2cxLTEyMicgZD0nTTEuNTE4MzA2LS45NjgzNjlDMi4wMzIzNzktMS41NTQxNzIgMi40NTA4MDktMS45MjQ3ODIgMy4wNDg1NjgtMi40NjI3NjVDMy43NjU4NzgtMy4wODQ0MzMgNC4wNzY3MTItMy4zODMzMTMgNC4yNDQwODUtMy41NjI2NEM1LjA4MDk0Ni00LjM4NzU0NyA1LjQ5OTM3Ny01LjA4MDk0NiA1LjQ5OTM3Ny01LjE3NjU4OFM1LjQwMzczNi01LjI3MjIyOSA1LjM3OTgyNi01LjI3MjIyOUM1LjI5NjEzOS01LjI3MjIyOSA1LjI3MjIyOS01LjIyNDQwOCA1LjIxMjQ1My01LjE0MDcyMkM0LjkxMzU3NC00LjYyNjY1IDQuNjI2NjUtNC4zNzU1OTIgNC4zMTU4MTYtNC4zNzU1OTJDNC4wNjQ3NTctNC4zNzU1OTIgMy45MzMyNS00LjQ4MzE4OCAzLjcwNjEwMi00Ljc3MDExMkMzLjQ1NTA0NC01LjA2ODk5MSAzLjI1MTgwNi01LjI3MjIyOSAyLjkwNTEwNi01LjI3MjIyOUMyLjAzMjM3OS01LjI3MjIyOSAxLjUwNjM1MS00LjE4NDMwOSAxLjUwNjM1MS0zLjkzMzI1QzEuNTA2MzUxLTMuODk3Mzg1IDEuNTE4MzA2LTMuODI1NjU0IDEuNjI1OTAzLTMuODI1NjU0QzEuNzIxNTQ0LTMuODI1NjU0IDEuNzMzNDk5LTMuODczNDc0IDEuNzY5MzY1LTMuOTU3MTYxQzEuOTcyNjAzLTQuNDM1MzY3IDIuNTQ2NDUxLTQuNTE5MDU0IDIuNzczNTk5LTQuNTE5MDU0QzMuMDI0NjU4LTQuNTE5MDU0IDMuMjYzNzYxLTQuNDM1MzY3IDMuNTE0ODE5LTQuMzI3NzcxQzMuOTY5MTE2LTQuMTM2NDg4IDQuMTYwMzk5LTQuMTM2NDg4IDQuMjc5OTUtNC4xMzY0ODhDNC4zNjM2MzYtNC4xMzY0ODggNC40MTE0NTctNC4xMzY0ODggNC40NzEyMzMtNC4xNDg0NDNDNC4wNzY3MTItMy42ODIxOTIgMy40MzExMzMtMy4xMDgzNDQgMi44OTMxNTEtMi42MTgxODJMMS42ODU2NzktMS41MDYzNTFDLjk1NjQxMy0uNzY1MTMxIC41MTQwNzItLjA1OTc3NiAuNTE0MDcyIC4wMjM5MUMuNTE0MDcyIC4wOTU2NDEgLjU3Mzg0OCAuMTE5NTUyIC42NDU1NzkgLjExOTU1MlMuNzI5MjY1IC4xMDc1OTcgLjgxMjk1MS0uMDM1ODY2QzEuMDA0MjM0LS4zMzQ3NDUgMS4zODY4LS43NzcwODYgMS44MjkxNDEtLjc3NzA4NkMyLjA4MDE5OS0uNzc3MDg2IDIuMTk5NzUxLS42OTM0IDIuNDM4ODU0LS4zOTQ1MjFDMi42NjYwMDItLjEzMTUwNyAyLjg2OTI0IC4xMTk1NTIgMy4yNTE4MDYgLjExOTU1MkM0LjQyMzQxMiAuMTE5NTUyIDUuMDkyOTAyLTEuMzk4NzU1IDUuMDkyOTAyLTEuNjczNzI0QzUuMDkyOTAyLTEuNzIxNTQ0IDUuMDgwOTQ2LTEuNzkzMjc1IDQuOTYxMzk1LTEuNzkzMjc1QzQuODY1NzUzLTEuNzkzMjc1IDQuODUzNzk4LTEuNzQ1NDU1IDQuODE3OTMzLTEuNjI1OTAzQzQuNTU0OTE5LS45MjA1NDggMy44NDk1NjQtLjYzMzYyNCAzLjM4MzMxMy0uNjMzNjI0QzMuMTMyMjU0LS42MzM2MjQgMi44OTMxNTEtLjcxNzMxIDIuNjQyMDkyLS44MjQ5MDdDMi4xNjM4ODUtMS4wMTYxODkgMi4wMzIzNzktMS4wMTYxODkgMS44NzY5NjEtMS4wMTYxODlDMS43NTc0MS0xLjAxNjE4OSAxLjYyNTkwMy0xLjAxNjE4OSAxLjUxODMwNi0uOTY4MzY5WicvPgo8L2RlZnM+CjxnIGlkPSdwYWdlMSc+Cjx1c2UgeD0nMCcgeT0nMCcgeGxpbms6aHJlZj0nI2cxLTk4Jy8+Cjx1c2UgeD0nNC45NzcxMDUnIHk9JzAnIHhsaW5rOmhyZWY9JyNnMS0xMDgnLz4KPHVzZSB4PSc4LjcyNjkxNCcgeT0nMCcgeGxpbms6aHJlZj0nI2cxLTExMScvPgo8dXNlIHg9JzE0LjM1NDM1MScgeT0nMCcgeGxpbms6aHJlZj0nI2cxLTk5Jy8+Cjx1c2UgeD0nMTkuMzkyMzQnIHk9JzAnIHhsaW5rOmhyZWY9JyNnMS0xMDcnLz4KPHVzZSB4PScyNS44ODE4NDQnIHk9JzAnIHhsaW5rOmhyZWY9JyNnMS04MycvPgo8dXNlIHg9JzMzLjc3NzE2NycgeT0nMCcgeGxpbms6aHJlZj0nI2cxLTEwNScvPgo8dXNlIHg9JzM3Ljc3MDU5OScgeT0nMCcgeGxpbms6aHJlZj0nI2cxLTEyMicvPgo8dXNlIHg9JzQzLjc0MTIwNicgeT0nMCcgeGxpbms6aHJlZj0nI2cxLTEwMScvPgo8dXNlIHg9JzUyLjQ4NzQ3NScgeT0nMCcgeGxpbms6aHJlZj0nI2cwLTIxJy8+Cjx1c2UgeD0nNjUuMTA2ODAyJyB5PScwJyB4bGluazpocmVmPScjZzItNDgnLz4KPC9nPgo8L3N2Zz4KPCEtLSBERVBUSD0yIC0tPg==" alt="blockSize \geq 0" style="vertical-align: -2px"/></span></dt><dd><p>Number of terms in the probability simulation estimator grouped together.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setInputAuxiliarySample">
+<span class="sig-name descname"><span class="pre">setInputAuxiliarySample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputAuxiliarySample</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setInputAuxiliarySample" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the input auxiliary sample.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setName">
+<span class="sig-name descname"><span class="pre">setName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setName" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the object’s name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>The name of the object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setOuterSampling">
+<span class="sig-name descname"><span class="pre">setOuterSampling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outerSampling</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setOuterSampling" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the total number of limit state function evaluations.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setOutputAuxiliarySample">
+<span class="sig-name descname"><span class="pre">setOutputAuxiliarySample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputAuxiliarySample</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setOutputAuxiliarySample" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the output auxiliary sample.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setProbabilityEstimate">
+<span class="sig-name descname"><span class="pre">setProbabilityEstimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proba</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setProbabilityEstimate" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the probability estimate.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setStepsNumber">
+<span class="sig-name descname"><span class="pre">setStepsNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stepsNumber</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setStepsNumber" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the number of steps in Cross-Entropy algorithm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setThresholdPerStep">
+<span class="sig-name descname"><span class="pre">setThresholdPerStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thresholdPerStep</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setThresholdPerStep" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the intermediate thresholds in Cross-Entropy algorithm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setTimeDuration">
+<span class="sig-name descname"><span class="pre">setTimeDuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setTimeDuration" title="Link to this definition">¶</a></dt>
+<dd><p>Accessor to the elapsed time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>time</strong><span class="classifier">float</span></dt><dd><p>Simulation duration in seconds</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setVAE">
+<span class="sig-name descname"><span class="pre">setVAE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VAE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setVAE" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the Variational AutoEncoder at the final step.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="otCEISVAE.CEISVAEResult.setVarianceEstimate">
+<span class="sig-name descname"><span class="pre">setVarianceEstimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">varianceEstimate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#otCEISVAE.CEISVAEResult.setVarianceEstimate" title="Link to this definition">¶</a></dt>
+<dd><p>Set up the variance estimate.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../examples/examples.html" title="Examples"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="otCEISVAE.CEISVAE.html" title="CEISVAE"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">otCEISVAE 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../user_manual.html" >API Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CEISVAEResult</a></li> 
+      </ul>
+    </div>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+  </body>
+</html>
