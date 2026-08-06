@@ -27,7 +27,7 @@ Several Python packages are required:
 Documentation
 =============
 
-A  documentation, including examples is available `here <https://l-brevault.github.io/otCEISVAE/master/>`_.
+A  documentation, including examples is available `here <https://l-brevault.github.io/otCEISVAE/master/index.html>`_.
 
 Build from source
 =================
