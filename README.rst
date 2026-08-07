@@ -14,7 +14,8 @@ Prerequisites
 =============
 This module can only work with python==3.10 (to ensure compatibility between the packages).
 
-Several Python packages are required: 
+Several Python packages are required:
+ 
 * numpy>=1.26.4,
 * tensorflow-cpu==2.19.0,
 * silence_tensorflow==1.2.3,
